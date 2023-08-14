@@ -1,0 +1,70 @@
+{
+  "extends": [
+     "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@next/next/recommended",
+    "next/core-web-vitals",
+    "prettier/prettier",
+    "../../.eslintrc.json"
+  ],
+  "plugins": ["prettier"],
+  "ignorePatterns": ["!**/*", ".next/**/*"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "rules": {
+        "@next/next/no-html-link-for-pages": ["error", "apps/frontend/pages"]
+      }
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {}
+    },
+    {
+      "files": ["*.js", "*.jsx"],
+      "rules": {}
+    }
+  ],
+  "rules": {
+    "@next/next/no-html-link-for-pages": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+    "react/display-name": "off",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-var-requires": 0,
+    "@typescript-eslint/no-unused-vars": ["error"],
+    "@typescript-eslint/explicit-module-boundary-types": "off"
+  }
+}
+
+// {
+//    "extends": [
+//     "eslint:recommended",
+//     "plugin:@typescript-eslint/recommended",
+//     "plugin:@next/next/recommended",
+//     "next/core-web-vitals"
+//   ],
+//   "parserOptions": {
+//         "project": ["tsconfig.*?.json"]
+//       },
+//  "overrides": [
+//     {
+//       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+//       "rules": {
+//         "@next/next/no-html-link-for-pages": ["error", "apps/frontend/pages"]
+//       }
+//     },
+//     {
+//       "files": ["*.ts", "*.tsx"],
+//       "rules": {}
+//     },
+//     {
+//       "files": ["*.js", "*.jsx"],
+//       "rules": {}
+//     }
+//   ],
+  
+//   "rules": {
+//     "@typescript-eslint/no-var-requires": "off"
+//   }
+// }
